@@ -1,0 +1,228 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* BODY BACKGROUND */
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(-45deg, #2196f3, #9c27b0, #ff9800, #00bcd4);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+/* Animated background */
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* HEADINGS */
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* GLASS CARD */
+
+form,
+table {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* FORM */
+
+form {
+    width: 380px;
+    padding: 25px;
+    animation: slideIn 0.8s ease;
+}
+
+
+/* Slide animation */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* INPUTS */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 14px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 152, 0, 0.6);
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* TABLE HEAD */
+
+th {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 12px;
+}
+
+
+/* TABLE DATA */
+
+td {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ROW HOVER */
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+
+/* STATUS BADGES */
+
+td:nth-child(5) {
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+
+/* STATUS COLORS */
+
+td:nth-child(5):contains("New") {
+    background: #03a9f4;
+}
+
+td:nth-child(5):contains("Contacted") {
+    background: #4caf50;
+}
+
+td:nth-child(5):contains("Closed") {
+    background: #f44336;
+}
+
+
+/* LINKS */
+
+a {
+    color: #ffeb3b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+
+/* BACK LINK */
+
+.back {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    form {
+        width: 100%;
+    }
+    table {
+        font-size: 12px;
+    }
+}

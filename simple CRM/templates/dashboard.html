@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRM Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <h2>Leads Dashboard</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Date</th>
+        </tr>
+
+        <tbody>
+            {% for lead in leads %}
+            <tr>
+                <td>{{ lead['name'] }}</td>
+                <td>{{ lead['email'] }}</td>
+                <td>{{ lead['phone'] }}</td>
+                <td>{{ lead['message'] }}</td>
+                <td>{{ lead['status'] }}</td>
+                <td>
+                    <a href="/update/{{ lead['id'] }}/New">New</a> |
+                    <a href="/update/{{ lead['id'] }}/Contacted">Contacted</a> |
+                    <a href="/update/{{ lead['id'] }}/Closed">Closed</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+
+    <br>
+    <a href="/">⬅ Back to Form</a>
+</body>
+
+</html>
